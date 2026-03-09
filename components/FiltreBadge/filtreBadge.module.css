@@ -1,0 +1,26 @@
+.badge {
+  display: flex !important; /* Force l'affichage */
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFD15B; /* Jaune visible */
+  padding: 15px 18px;
+  border-radius: 11px;
+  width: 100%; 
+  min-height: 50px; /* Assure une hauteur */
+  margin-bottom: 5px;
+  visibility: visible !important;
+}
+
+.label {
+  font-family: 'Manrope', sans-serif;
+  color: #1B1B1B;
+  font-size: 14px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1B1B1B;
+}
+ 

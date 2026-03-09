@@ -1,0 +1,41 @@
+.filtresSection {
+  width: 100%;
+  padding: 30px 60px;
+  background-color: #EDEDED;
+}
+
+.mainGrid {
+  max-width: 1260px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 195px 195px 195px 1fr;
+  gap: 30px;
+  align-items: flex-start; /* Permet aux colonnes de s'allonger avec les badges */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 195px;
+}
+
+.badgeArea {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 20px;
+}
+
+.counterWrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+
+.counter {
+  font-family: 'Anton', sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  color: #1B1B1B;
+}

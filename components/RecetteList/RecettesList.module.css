@@ -1,0 +1,42 @@
+.gridContainer {
+  width: 100%;
+  padding: 40px 60px; /* Aligné avec le header et les filtres */
+  max-width: 1380px; /* Largeur max de la maquette Figma */
+  margin: 0 auto;
+  background: #EDEDED;
+}
+
+.grid {
+  display: grid;
+  /* Grille de 3 colonnes sur desktop */
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px; /* Espace horizontal large selon Figma */
+  row-gap: 60px;    /* Espace vertical */
+}
+
+.noResult {
+  text-align: center;
+  padding: 100px 20px;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
+  color: #1B1B1B;
+}
+
+/* Tablettes (2 colonnes) */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+  }
+}
+
+/* Mobiles (1 colonne) */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  .gridContainer {
+    padding: 20px;
+  }
+}

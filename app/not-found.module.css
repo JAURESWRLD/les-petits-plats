@@ -1,0 +1,55 @@
+.wrapper {
+  background-color: #EDEDED;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.errorCode {
+  font-family: 'Anton', sans-serif;
+  font-size: 150px;
+  color: #FFD15B;
+  line-height: 1;
+  margin: 0;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #1B1B1B;
+  margin-top: -20px;
+}
+
+.description {
+  font-family: 'Manrope', sans-serif;
+  color: #7A7A7A;
+  max-width: 400px;
+  margin: 20px 0 40px;
+}
+
+.homeBtn {
+  background-color: #1B1B1B;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  transition: background 0.3s;
+}
+
+.homeBtn:hover {
+  background-color: #FFD15B;
+  color: #1B1B1B;
+}

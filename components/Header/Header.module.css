@@ -1,0 +1,96 @@
+.header {
+  position: relative;
+  height: 667px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Background image handled via Next.js Image or below */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+              url('/lampos.png') no-repeat center/cover;
+}
+
+.logoContainer {
+  /* placement hors du flux flex pour qu'il ne glisse pas vers le bas */
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  width: auto;
+  height: auto;
+}
+
+.heroContent {
+  max-width: 950px;
+  width: 90%;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  color: #FFD15B;
+  font-size: 44px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 24px 35px;
+  border-radius: 11px;
+  border: none;
+  font-size: 18px;
+  font-family: 'Manrope', sans-serif;
+  color: #e5caca;
+  background: white;
+}
+
+.searchButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1B1B1B;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.searchButton:hover {
+  background-color: #FFD15B;
+}
+
+
+/* Version Accueil (Imposante) */
+.headerLarge {
+  height: 667px;
+  /* Background image handled via Next.js Image or below */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+              url('/lampos.png') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* pour permettre au logo d'être positionné en absolu */
+}
+
+/* Version Recette (Coupée/Small) */
+.headerSmall {
+  height: 100px; /* On réduit drastiquement la hauteur */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+              url('/lampos.png') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  border-bottom: 1px solid #EDEDED;
+}

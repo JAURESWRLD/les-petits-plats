@@ -1,0 +1,145 @@
+/* app/recette/[slug]/page.module.css */
+
+.mainWrapper {
+  background: #FFFFFF;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.cardDetail {
+  background: #FFFFFF;
+  overflow: hidden;
+  display: flex;
+}
+
+.heroImage {
+  position: relative;
+  width: 50%;
+  height: 650px; /* Hauteur visuelle impactante */
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.timeBadge {
+  background-color: #FFD15B; /* Jaune signature */
+  padding: 8px 20px;
+  border-radius: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1B1B1B;
+}
+
+.content {
+  padding: 0 60px;
+  width: 50%;
+}
+
+.title {
+  font-family: 'Anton', sans-serif; /* Police des titres Figma */
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #1B1B1B;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.subTitle {
+  font-family: 'Manrope', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #7A7A7A; /* Gris des sous-titres Figma */
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* --- Section Ingrédients --- */
+.ingredientsSection {
+  display: flex;
+  flex-direction: column;
+}
+.ingredientsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  padding: 0;
+  margin: 0;
+  gap: 2rem;
+}
+.ingredientItem {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ingName {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1B1B1B;
+}
+
+.ingQty {
+  font-family: 'Manrope', sans-serif;
+  color: #7A7A7A;
+  font-size: 14px;
+}
+
+/* --- Section Instructions --- */
+.description {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1B1B1B;
+  white-space: pre-line; /* Respecte les retours à la ligne du JSON */
+}
+
+.metaInfo {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #EDEDED;
+}
+
+.metaInfo p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #1B1B1B;
+}
+
+.metaInfo strong {
+  font-weight: 800;
+}
+
+/* --- Responsive --- */
+@media (max-width: 950px) {
+  .grid {
+    grid-template-columns: 1fr; /* Passage sur une seule colonne sur tablette/mobile */
+    gap: 40px;
+  }
+
+  .content {
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .heroImage {
+    height: 300px;
+  }
+}
