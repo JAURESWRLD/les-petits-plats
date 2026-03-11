@@ -1,6 +1,5 @@
 import RecetteCard from '../RecetteCard/RecetteCard';
 import styles from './RecettesList.module.css'
-import recettes from '@/data/recipes.json'
 
 
 export default function RecettesList({ recettes = [] }) {

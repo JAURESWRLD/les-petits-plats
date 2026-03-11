@@ -1,6 +1,6 @@
 import styles from './Footer.module.css';
 
-export default function Footer() {
+export default function Footer({ onSearch, is404 }) {
   const currentYear = new Date().getFullYear();
 
   return (

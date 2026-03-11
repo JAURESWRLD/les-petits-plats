@@ -39,3 +39,22 @@
   text-transform: uppercase;
   color: #1B1B1B;
 }
+
+@media (max-width: 768px) {
+  .mainGrid {
+    grid-template-columns: 1fr; /* Passe à une seule colonne sur mobile */
+    gap: 0;
+  }
+  
+  .column {
+    width: 100%; /* Les colonnes prennent toute la largeur sur mobile */
+    align-items: center;
+  }
+  
+  .counterWrapper {
+    justify-content: center; /* Centre le compteur sur mobile */
+  }
+  .filtresSection {
+    padding: 20px; /* Réduit les padding sur mobile */
+  }
+}

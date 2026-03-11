@@ -21,7 +21,7 @@
 .heroImage {
   position: relative;
   width: 50%;
-  height: 650px; /* Hauteur visuelle impactante */
+  height: 738px; /* Hauteur visuelle impactante */
 }
 
 .image {
@@ -100,46 +100,46 @@
 }
 
 /* --- Section Instructions --- */
-.description {
-  font-family: 'Manrope', sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
-  color: #1B1B1B;
-  white-space: pre-line; /* Respecte les retours à la ligne du JSON */
-}
-
-.metaInfo {
-  margin-top: 40px;
-  padding-top: 30px;
-  border-top: 1px solid #EDEDED;
-}
-
-.metaInfo p {
-  font-size: 14px;
-  margin-bottom: 8px;
+.instructionItem{
   color: #1B1B1B;
 }
 
-.metaInfo strong {
-  font-weight: 800;
+.stepTitle{
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
-/* --- Responsive --- */
-@media (max-width: 950px) {
-  .grid {
-    grid-template-columns: 1fr; /* Passage sur une seule colonne sur tablette/mobile */
-    gap: 40px;
-  }
+.stepList{
+  margin-left: 40px;
+  list-style-type: disc;
+}
 
+.stepList li{
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 640px) {
   .content {
-    padding: 30px;
+    padding: 20px 0;
+    width: 100%;
   }
 
   .title {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .heroImage {
-    height: 300px;
+    height: 200px;
+    width: 100%;
+  }
+
+  .ingredientsList {
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur mobile */
+    gap: 1.5rem;
+  }
+  .cardDetail {
+    flex-direction: column;
   }
 }

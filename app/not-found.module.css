@@ -1,8 +1,8 @@
 .wrapper {
-  background-color: #EDEDED;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  flex: 1; /* take available vertical space from body */
+  background-color: #EDEDED; /* Gris clair de ton image */
 }
 
 .main {
@@ -12,33 +12,32 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding-bottom: 100px;
 }
 
 .errorCode {
   font-family: 'Anton', sans-serif;
   font-size: 150px;
-  color: #FFD15B;
-  line-height: 1;
+  color: #FFD15B; /* Jaune de ton image */
   margin: 0;
 }
 
-.title {
+.errorMessage {
   font-family: 'Anton', sans-serif;
   font-size: 32px;
-  text-transform: uppercase;
-  color: #1B1B1B;
+  color: #000;
   margin-top: -20px;
 }
 
 .description {
   font-family: 'Manrope', sans-serif;
   color: #7A7A7A;
-  max-width: 400px;
+  max-width: 450px;
   margin: 20px 0 40px;
+  line-height: 1.5;
 }
 
-.homeBtn {
+.backBtn {
   background-color: #1B1B1B;
   color: white;
   padding: 15px 40px;
@@ -46,10 +45,9 @@
   text-decoration: none;
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
-  transition: background 0.3s;
+  transition: opacity 0.2s;
 }
 
-.homeBtn:hover {
-  background-color: #FFD15B;
-  color: #1B1B1B;
+.backBtn:hover {
+  opacity: 0.8;
 }

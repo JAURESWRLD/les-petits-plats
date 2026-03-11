@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import recipesData from '@/data/recipes.json';
 import Image from 'next/image';
 import styles from './page.module.css';
-import Head from 'next/head';
 import Header from '@/components/Header/Header';
 
 export default async function RecettePage({ params }) {
@@ -55,44 +54,48 @@ export default async function RecettePage({ params }) {
                     </div>
                   </section>
                   <section className={styles.applianceSection}>
-                    <h2 className={styles.subTitle}>Appareil</h2>
+                    <h2 className={styles.subTitle}>Appareil nécessaire</h2>
                     <p className={styles.description}>{recette.appliance}</p>
                   </section>
                   <section className={styles.ustensilsSection}>
-                    <h2 className={styles.subTitle}>Ustensiles</h2>
+                    <h2 className={styles.subTitle}>Ustensiles nécessaires</h2>
                     <p className={styles.description}>{recette.ustensils.join(', ')}</p>
                   </section>
 
-                  {/* Colonne de droite : Instructions */}
+                  {/* Instructions */}
                   <section className={styles.recipeSection}>
                     <h2 className={styles.subTitle}>Recette</h2>
-                    <div className={styles.description}>
-                        <div className={styles.instructionList}>
-                            {recette.description.split('. ').map((etape, index) => {
-                            if (!etape.trim()) return null;
 
-                            // On découpe l'étape en sous-parties via les virgules
-                            const sousEtapes = etape.split(', ');
+                    <div className={styles.instructionList}>
+                      {recette.description.split('.').map((etape, index) => {
+                        const phrase = etape.trim();
+                        if (!phrase) return null;
 
-                            return (
-                                <div key={index} className={styles.instructionItem}>
-                                {/* Le numéro de l'étape principale (1. 2. 3.) */}
-                                <span className={styles.stepNumber}>{index + 1}.</span>
-                                
-                                <div className={styles.stepContent}>
-                                    {sousEtapes.map((sousEtape, subIndex) => (
-                                    <p key={subIndex} className={styles.subStepText}>
-                                        {/* On remet la majuscule au début de chaque ligne si besoin */}
-                                        {sousEtape.charAt(0).toUpperCase() + sousEtape.slice(1)}
-                                        {/* On rajoute le point final uniquement sur la toute dernière sous-étape */}
-                                        {subIndex === sousEtapes.length - 1 ? '.' : ''}
-                                    </p>
-                                    ))}
-                                </div>
-                                </div>
-                            );
-                            })}
-                        </div>
+                        const sousEtapes = phrase
+                          .split(',')
+                          .map((s) => s.trim())
+                          .filter(Boolean);
+
+                        return (
+                          <div key={index} className={styles.instructionItem}>
+                            
+                            {/* Titre de l'étape */}
+                            <h3 className={styles.stepTitle}>
+                              {index + 1}. Étape {index + 1} :
+                            </h3>
+
+                            {/* Liste des actions */}
+                            <ul className={styles.stepList}>
+                              {sousEtapes.map((sousEtape, subIndex) => (
+                                <li key={subIndex}>
+                                  {sousEtape.charAt(0).toUpperCase() + sousEtape.slice(1)}
+                                </li>
+                              ))}
+                            </ul>
+
+                          </div>
+                        );
+                      })}
                     </div>
                   </section>
                 </div>
